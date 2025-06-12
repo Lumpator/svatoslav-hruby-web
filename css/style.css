@@ -6,6 +6,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -692,5 +693,49 @@ footer p {
 
     .lightbox-caption {
         width: 90%;
+    }
+}
+
+/* Extra malé displeje (šířka do 400px) */
+@media (max-width: 400px) {
+    html, body {
+        width: 100vw;
+        min-width: 0;
+        overflow-x: hidden;
+    }
+    .container {
+        width: 100vw;
+        min-width: 0;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+    .gallery-grid, .track-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    header nav, .nav-controls, .navigation-menu {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100vw !important;
+        min-width: 0;
+    }
+    .theme-toggle-button {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+    h1, h2, h3, h4 {
+        font-size: 1.1em;
+        word-break: break-word;
+    }
+    .about-image img, .about-image .image-placeholder {
+        max-width: 100%;
+        height: auto;
+    }
+    .cta-button, .cta-button.secondary {
+        font-size: 15px;
+        padding: 8px 10px;
+    }
+    .lightbox-content {
+        max-width: 98vw;
     }
 }

@@ -797,4 +797,58 @@ footer p {
     .lightbox-content {
         max-width: 98vw;
     }
+
+    .logo a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 1.1em;
+        word-break: break-word;
+        white-space: pre-line;
+    }
+}
+
+.logo a {
+    white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+    .logo a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 1.1em;
+        white-space: normal;
+        word-break: keep-all;
+    }
+
+    .logo a span {
+        display: block;
+        line-height: 1.1;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-controls {
+        flex: 1 1 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: block;
+        order: 2;
+        margin-left: 0;
+        margin-right: 0;
+        align-self: center;
+    }
 }

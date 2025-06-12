@@ -575,17 +575,14 @@ footer p {
 
 /* Responzivita */
 @media(max-width: 768px) {
-    /* header nav { */
-    /* flex-direction: column;  Již není potřeba, nav-controls se postará o layout */
-    /* align-items: center; */
-    /* padding-bottom: 15px; Odstraněno odsud, přesunuto výše pro konzistenci */
-    /* } */
-    /* Zakomentováno nebo odstraněno prázdné pravidlo */
+    header nav {
+        /* Přidáno pro zarovnání hamburger menu doprava */
+        justify-content: space-between;
+    }
 
     .nav-controls {
-        /* flex-direction: column; */
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-end; /* Zarovná hamburger menu doprava */
         width: 100%;
         align-items: center;
     }
@@ -593,7 +590,8 @@ footer p {
     .hamburger-menu {
         display: block;
         /* Zobrazí se na mobilu */
-        order: 1;
+        order: 2;
+        margin-left: auto; /* Posune hamburger menu doprava */
     }
 
     .navigation-menu {

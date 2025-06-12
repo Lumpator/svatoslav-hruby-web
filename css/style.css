@@ -642,8 +642,8 @@ footer p {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: calc(70px + 3px);
-        /* Výška hlavičky + border-bottom, upravte podle skutečné výšky hlavičky */
+        top: 120px;
+        /* Posun menu níže, aby křížek nepřekrýval první řádek menu */
         left: 0;
         background-color: #333;
         padding: 10px 0;

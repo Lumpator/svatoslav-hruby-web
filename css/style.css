@@ -577,13 +577,53 @@ footer p {
 /* Responzivita */
 @media(max-width: 768px) {
     header nav {
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+
+    .logo {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+    }
+
+    .nav-controls {
+        flex: 1 1 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: block;
+        order: 2;
+        margin-left: 0;
+        margin-right: 0;
+        align-self: center;
+    }
+
+    .logo a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 768px) {
+    header nav {
         /* Přidáno pro zarovnání hamburger menu doprava */
         justify-content: space-between;
     }
 
     .nav-controls {
         flex-direction: row;
-        justify-content: flex-end; /* Zarovná hamburger menu doprava */
+        justify-content: flex-end;
+        /* Zarovná hamburger menu doprava */
         width: 100%;
         align-items: center;
     }
@@ -592,7 +632,8 @@ footer p {
         display: block;
         /* Zobrazí se na mobilu */
         order: 2;
-        margin-left: auto; /* Posune hamburger menu doprava */
+        margin-left: auto;
+        /* Posune hamburger menu doprava */
     }
 
     .navigation-menu {
@@ -698,43 +739,61 @@ footer p {
 
 /* Extra malé displeje (šířka do 400px) */
 @media (max-width: 400px) {
-    html, body {
+
+    html,
+    body {
         width: 100vw;
         min-width: 0;
         overflow-x: hidden;
     }
+
     .container {
         width: 100vw;
         min-width: 0;
         padding: 0 5px;
         box-sizing: border-box;
     }
-    .gallery-grid, .track-list {
+
+    .gallery-grid,
+    .track-list {
         grid-template-columns: 1fr;
         gap: 10px;
     }
-    header nav, .nav-controls, .navigation-menu {
+
+    header nav,
+    .nav-controls,
+    .navigation-menu {
         flex-direction: column !important;
         align-items: stretch !important;
         width: 100vw !important;
         min-width: 0;
     }
+
     .theme-toggle-button {
         font-size: 14px;
         padding: 6px 8px;
     }
-    h1, h2, h3, h4 {
+
+    h1,
+    h2,
+    h3,
+    h4 {
         font-size: 1.1em;
         word-break: break-word;
     }
-    .about-image img, .about-image .image-placeholder {
+
+    .about-image img,
+    .about-image .image-placeholder {
         max-width: 100%;
         height: auto;
     }
-    .cta-button, .cta-button.secondary {
+
+    .cta-button,
+    .cta-button.secondary {
         font-size: 15px;
         padding: 8px 10px;
     }
+
     .lightbox-content {
         max-width: 98vw;
     }

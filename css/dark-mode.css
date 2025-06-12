@@ -1,0 +1,177 @@
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: #2c2c2c;
+    border-bottom: #0056b3 3px solid;
+}
+
+body.dark-mode header a {
+    color: #e0e0e0;
+}
+
+body.dark-mode header nav a:hover,
+body.dark-mode header nav .active {
+    color: #007bff;
+    /* Jasnější modrá pro tmavý režim */
+}
+
+body.dark-mode #hero {
+    background: #222 url('../img/hero-bg-dark.jpg') no-repeat center center/cover;
+    /* Volitelný tmavší obrázek na pozadí */
+    color: #f0f0f0;
+}
+
+body.dark-mode #hero h1 {
+    text-shadow: 2px 2px 4px #000;
+}
+
+body.dark-mode #hero p {
+    text-shadow: 1px 1px 2px #000;
+}
+
+body.dark-mode .cta-button {
+    background: #007bff;
+    color: #fff;
+}
+
+body.dark-mode .cta-button:hover {
+    background: #0056b3;
+}
+
+body.dark-mode .cta-button.secondary {
+    background: #444;
+}
+
+body.dark-mode .cta-button.secondary:hover {
+    background: #222;
+}
+
+body.dark-mode #latest-news {
+    background: #2c2c2c;
+}
+
+body.dark-mode .news-item {
+    background: #333;
+    border-left: 5px solid #007bff;
+    color: #dcdcdc;
+}
+
+body.dark-mode .news-item h3 {
+    color: #f0f0f0;
+}
+
+
+body.dark-mode footer {
+    background: #2c2c2c;
+    color: #e0e0e0;
+}
+
+/* Dark mode pro specifické stránky */
+body.dark-mode #about-me .container,
+body.dark-mode #music-intro .container,
+body.dark-mode #album-tracks .container,
+body.dark-mode #gallery-intro .container,
+body.dark-mode #photo-gallery .container,
+body.dark-mode #contact-intro .container,
+body.dark-mode #contact-details .container {
+    /* Není potřeba specifický styl jen pro kontejner, pokud dědí z body */
+}
+
+body.dark-mode #about-me h2,
+body.dark-mode #music-intro h2,
+#album-tracks h3,
+body.dark-mode #gallery-intro h2,
+body.dark-mode #contact-intro h2 {
+    color: #f0f0f0;
+}
+
+
+body.dark-mode .about-image .image-placeholder {
+    background-color: #333;
+    color: #aaa;
+}
+
+body.dark-mode .track-item {
+    background: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .track-item h4 {
+    color: #007bff;
+}
+
+body.dark-mode .track-item.placeholder h4 {
+    color: #888;
+}
+
+body.dark-mode .cta-link {
+    color: #007bff;
+}
+
+body.dark-mode .gallery-item {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .gallery-item .overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .contact-info,
+body.dark-mode .contact-form-container {
+    background: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .contact-info h3,
+body.dark-mode .contact-form-container h3 {
+    color: #007bff;
+}
+
+body.dark-mode .contact-info a {
+    color: #007bff;
+}
+
+body.dark-mode .form-group label {
+    color: #dcdcdc;
+}
+
+body.dark-mode .form-group input[type="text"],
+body.dark-mode .form-group input[type="email"],
+body.dark-mode .form-group textarea {
+    background-color: #2c2c2c;
+    border: 1px solid #555;
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-group input[type="text"]::placeholder,
+body.dark-mode .form-group input[type="email"]::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+    color: #888;
+}
+
+/* Styly pro tlačítko přepínání motivu - PŘESUNUTO DO style.css pro sjednocení */
+/* .theme-toggle-button { ... } */
+/* .theme-toggle-button:hover { ... } */
+
+body.dark-mode .theme-toggle-button {
+    border-color: #555;
+    color: #e0e0e0;
+    /* Barva ikony v tmavém režimu */
+}
+
+body.dark-mode .theme-toggle-button:hover {
+    background-color: #444;
+}
+
+/* Úprava layoutu navigace pro zahrnutí tlačítka - PŘESUNUTO DO style.css */
+/* header nav { ... } */
+/* .nav-controls { ... } */
+/* .nav-controls ul { ... } */
+/* .nav-controls li { ... } */
+
+/* Responzivní pravidla pro tlačítko a nav-controls v tmavém režimu, pokud by byla potřeba specifická úprava */
+/* @media(max-width: 768px) { ... } */

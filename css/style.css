@@ -1,0 +1,698 @@
+/* Základní styly */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Hlavička a navigace */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header .logo a {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 15px;
+    /* Přidáno pro konzistenci s mobilní verzí a možný prostor navíc */
+}
+
+/* Styly pro .nav-controls (kontejner pro menu a tlačítko) */
+.nav-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Nové: Styly pro .navigation-menu (obaluje ul a theme-toggle) */
+.navigation-menu {
+    display: flex;
+    /* Na desktopu chceme ul a theme-toggle vedle sebe */
+    align-items: center;
+}
+
+.nav-controls ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Odstraní výchozí odsazení seznamu */
+}
+
+/* header ul { // Toto pravidlo je nyní pokryto .nav-controls ul nebo je příliš obecné
+    padding: 0;
+    list-style: none;
+} */
+
+header li {
+    /* Cílí na li uvnitř .nav-controls ul */
+    /* display: inline; */
+    /* ODSTRANĚNO - flex item se chová správně */
+    padding: 0 15px;
+    /* Mírně snížené odsazení pro úsporu místa */
+}
+
+header nav a:hover,
+header nav .active {
+    color: #0779e4;
+    font-weight: bold;
+}
+
+/* Hero sekce na úvodní stránce */
+#hero {
+    min-height: 400px;
+    background: url('../img/hero-bg.jpg') no-repeat center center/cover;
+    /* Přidejte obrázek na pozadí */
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Styly pro Hamburger menu */
+.hamburger-menu {
+    display: none;
+    /* Skryté na desktopu ve výchozím stavu */
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    z-index: 1001;
+    /* Aby bylo nad ostatními prvky v hlavičce */
+}
+
+.hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    /* Barva čárek hamburgeru */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Základní styly pro tlačítko přepínání motivu */
+.theme-toggle-button {
+    background: none;
+    border: 1px solid #ccc;
+    /* Výchozí barva ohraničení pro světlý režim */
+    color: #333;
+    /* Výchozí barva ikony pro světlý režim */
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 20px;
+    /* Odsazení od navigačních odkazů */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.theme-toggle-button:hover {
+    background-color: #f0f0f0;
+    /* Hover efekt pro světlý režim */
+}
+
+.cta-button {
+    display: inline-block;
+    background: #0779e4;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+.cta-button.secondary {
+    background: #555;
+}
+
+.cta-button.secondary:hover {
+    background: #333;
+}
+
+/* Sekce s aktualitami */
+#latest-news {
+    padding: 40px 0;
+    background: #fff;
+}
+
+#latest-news h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.news-item {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #0779e4;
+}
+
+.news-item h3 {
+    margin-top: 0;
+}
+
+/* Patička */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Styly pro stránku "O mně" */
+#about-me .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#about-me h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 300px;
+    /* Nebo jiná preferovaná výška */
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #777;
+    font-style: italic;
+}
+
+/* Styly pro stránku "Hudba" */
+#music-intro .container,
+#album-tracks .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#music-intro h2,
+#album-tracks h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#album-tracks h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.track-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.track-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.track-item h4 {
+    margin-top: 0;
+    color: #0779e4;
+}
+
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.track-item.placeholder h4 {
+    color: #777;
+}
+
+.cta-link {
+    color: #0779e4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-link:hover {
+    text-decoration: underline;
+}
+
+/* Styly pro stránku "Galerie" */
+#gallery-intro .container,
+#photo-gallery .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#gallery-intro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Styly pro stránku "Kontakt" */
+#contact-intro .container,
+#contact-details .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#contact-intro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#contact-details .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contact-info,
+.contact-form-container {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3,
+.contact-form-container h3 {
+    margin-top: 0;
+    color: #0779e4;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #0779e4;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 22px);
+    /* Adjust for padding and border */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#form-status {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Lightbox styly */
+.lightbox {
+    display: none;
+    /* Skrytý ve výchozím stavu */
+    position: fixed;
+    /* Zůstane na místě při scrollování */
+    z-index: 1001;
+    /* Vyšší než ostatní obsah, ale nižší než případné modální dialogy nad ním */
+    padding-top: 60px;
+    /* Místo pro zavírací tlačítko a obsah */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Umožní scroll, pokud je obrázek větší než viewport */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Tmavé pozadí s průhledností */
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    /* Šířka se přizpůsobí obsahu */
+    max-width: 80%;
+    /* Maximální šířka obrázku */
+    max-height: 80vh;
+    /* Maximální výška obrázku, aby se vešel na obrazovku */
+    animation-name: lightboxZoom;
+    animation-duration: 0.6s;
+}
+
+.lightbox-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 50px;
+    /* Pevná výška pro popisek */
+}
+
+@keyframes lightboxZoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styly pro navigační šipky v lightboxu */
+.lightbox-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -30px;
+    /* Polovina výšky šipky + padding */
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.lightbox-next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.lightbox-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Responzivita */
+@media(max-width: 768px) {
+    /* header nav { */
+    /* flex-direction: column;  Již není potřeba, nav-controls se postará o layout */
+    /* align-items: center; */
+    /* padding-bottom: 15px; Odstraněno odsud, přesunuto výše pro konzistenci */
+    /* } */
+    /* Zakomentováno nebo odstraněno prázdné pravidlo */
+
+    .nav-controls {
+        /* flex-direction: column; */
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+        /* Zobrazí se na mobilu */
+        order: 1;
+    }
+
+    .navigation-menu {
+        display: none;
+        /* Skryje původní menu na mobilu */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: calc(70px + 3px);
+        /* Výška hlavičky + border-bottom, upravte podle skutečné výšky hlavičky */
+        left: 0;
+        background-color: #333;
+        padding: 10px 0;
+        z-index: 1000;
+        border-top: 1px solid #444;
+        /* Oddělovač od hlavičky */
+    }
+
+    .navigation-menu.active {
+        display: flex;
+        /* Zobrazí menu po kliknutí na hamburger */
+    }
+
+    .nav-controls ul {
+        /* Toto je ul uvnitř .navigation-menu */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    header li {
+        padding: 12px 0;
+        /* Zvětšený padding pro lepší klikatelnost */
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #444;
+        /* Oddělovače mezi položkami */
+    }
+
+    header li:last-child {
+        border-bottom: none;
+        /* Poslední položka bez spodního ohraničení */
+    }
+
+    header li a {
+        display: block;
+        padding: 5px 0;
+        /* Přidán padding pro lepší dotykovou plochu */
+    }
+
+    .theme-toggle-button {
+        margin-left: 0;
+        margin-top: 15px;
+        /* Větší odsazení shora */
+        margin-bottom: 5px;
+        /* Malý odstup zespodu */
+        align-self: center;
+    }
+
+    /* Styly pro aktivní hamburger (křížek) */
+    .hamburger-menu.active .hamburger-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .hamburger-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .hamburger-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #hero h1 {
+        font-size: 35px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .about-content,
+    #contact-details .container {
+        flex-direction: column;
+    }
+}
+
+/* Responzivita pro lightbox */
+@media (max-width: 768px) {
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+
+    .lightbox-caption {
+        width: 90%;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svatoslav Hrubý - Cesty mých osudů</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css" id="dark-mode-stylesheet" disabled>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Svatoslav Hrubý</a>
+            </div>
+            <div class="nav-controls">
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Otevřít menu" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+                <div class="navigation-menu" id="navigation-menu">
+                    <ul>
+                        <li><a href="index.html" class="active">Úvod</a></li>
+                        <li><a href="about.html">O mně</a></li>
+                        <li><a href="music.html">Hudba</a></li>
+                        <li><a href="gallery.html">Galerie</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                        <!-- Link na admin stránku může být skrytý nebo podmíněný -->
+                        <!-- <li><a href="admin.html">Admin</a></li> -->
+                    </ul>
+                    <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero"
+            style="background: url('img/svata2.webp') no-repeat center center/cover; position: relative;">
+            <div style="position: absolute; inset: 0; background: rgba(30,30,30,0.55); z-index: 1;"></div>
+            <div class="hero-content" style="position: relative; z-index: 2;">
+                <h1>Cesty mých osudů</h1>
+                <p>Jsem textař a zpěvák. Svému umění se věnuji s vášní a přináším vám emocionální a autentické písně,
+                    které vycházejí z hlubokých životních zkušeností. Mé album "Cesty mých osudů" je příběhem, který
+                    chci sdílet.</p>
+                <p>Šest skladeb je již dokončeno a můžete si je poslechnout. Další čtyři jsou na cestě. Podpořte
+                    dokončení mého alba na Startovači!</p>
+                <a href="#" class="cta-button">Podpořit na Startovači</a>
+                <a href="music.html" class="cta-button secondary">Poslechnout hudbu</a>
+            </div>
+        </section>
+
+        <section id="latest-news">
+            <h2>Aktuality</h2>
+            <div class="news-item">
+                <h3>Nové skladby již brzy!</h3>
+                <p>Intenzivně pracuji na dokončení alba "Cesty mých osudů". Těšte se na nové písně plné emocí a příběhů.
+                </p>
+                <p><small>Publikováno: 12. června 2025</small></p>
+            </div>
+            <!-- Další aktuality mohou být přidány zde -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Svatoslav Hrubý. Všechna práva vyhrazena.</p>
+        <p>Moderní web s láskou vytvořen pro umělce.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
